@@ -63,3 +63,15 @@ Console.WriteLine("\n=====Part 3: Paycheck=====");
 Console.WriteLine("Gross pay: " + grossPay.ToString("C"));
 Console.WriteLine("Tax witheld: " + taxWitheld.ToString("C"));
 Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
+
+//Description: Prints trip total, cost per person, take home pay per hour, and hours that you have to work to cover a share.
+double tripTotal = fuelCost + pizzaCost;
+double costPerPerson = tripTotal / people;
+double takeHomePerHour = takeHomePay / hours;
+double coverShare = costPerPerson / takeHomePerHour;
+
+Console.WriteLine("\n=====Part 4: The Whole Trip=====");
+Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
+Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
+Console.WriteLine("Take home pay per hour: " + takeHomePerHour.ToString("C"));
+Console.WriteLine("Hours you must work to cover your share: " + coverShare.ToString("F2"));
