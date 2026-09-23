@@ -47,3 +47,19 @@ double pizzaCost = pizza * price;
 Console.WriteLine("Pizza cost: " + pizzaCost.ToString("C"));
 
 //Description: Calculates gross pay, tax witheld, and take home pay for a paycheck.
+Console.Write("\nHours worked this week?: ");
+int hours = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Hourly rate? ");
+double hourlyRate = Convert.ToDouble(Console.ReadLine());
+
+const double taxRate = 0.18;
+
+double grossPay = hours * hourlyRate;
+double taxWitheld = grossPay * taxRate;
+double takeHomePay = grossPay - taxWitheld;
+
+Console.WriteLine("\n=====Part 3: Paycheck=====");
+Console.WriteLine("Gross pay: " + grossPay.ToString("C"));
+Console.WriteLine("Tax witheld: " + taxWitheld.ToString("C"));
+Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
